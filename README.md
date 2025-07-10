@@ -1,4 +1,4 @@
-# NLW Agents - Projeto Fullstack
+# NLW Agents
 
 Projeto desenvolvido durante um evento da Rocketseat, composto por duas aplicações: uma **API back-end** com Node.js e uma **interface front-end** com React.
 
@@ -7,7 +7,7 @@ Projeto desenvolvido durante um evento da Rocketseat, composto por duas aplicaç
 ```
 .
 ├── server/  # API com Node.js, Fastify, PostgreSQL
-└── web/     # Front-end com React 19
+└── web/     # Front-end com React
 ```
 
 ## 📚 Índice
@@ -23,22 +23,22 @@ Projeto desenvolvido durante um evento da Rocketseat utilizando tecnologias mode
 
 ### 🚀 Tecnologias
 
-- Node.js com TypeScript nativo (experimental strip types)  
-- Fastify - Framework web rápido e eficiente  
-- PostgreSQL com extensão pgvector para vetores  
-- Drizzle ORM - Type-safe database operations  
-- Zod - Schema validation  
-- Docker - Containerização do banco de dados  
-- Biome - Linting e formatação de código  
+- **Node.js** com TypeScript nativo (experimental strip types)
+- **Fastify** - Framework web rápido e eficiente
+- **PostgreSQL** com extensão pgvector para vetores
+- **Drizzle ORM** - Type-safe database operations
+- **Zod** - Schema validation
+- **Docker** - Containerização do banco de dados
+- **Biome** - Linting e formatação de código
 
 ### 🏗️ Arquitetura
 
 O projeto segue uma arquitetura modular com:
 
-- Separação de responsabilidades entre rotas, schemas e conexão com banco  
-- Validação de schemas com Zod para type safety  
-- ORM type-safe com Drizzle para operações de banco de dados  
-- Validação de variáveis de ambiente centralizadas  
+- **Separação de responsabilidades** entre rotas, schemas e conexão com banco
+- **Validação de schemas** com Zod para type safety
+- **ORM type-safe** com Drizzle para operações de banco de dados
+- **Validação de variáveis de ambiente** centralizadas
 
 ### ⚙️ Setup e Configuração
 
@@ -49,35 +49,41 @@ O projeto segue uma arquitetura modular com:
 
 #### Passos:
 
-1. Clone o repositório  
+1. Clone o repositório
+
    ```bash
    git clone <url-do-repositorio>
    cd server
    ```
 
-2. Configure o banco de dados  
+2. Configure o banco de dados
+
    ```bash
    docker-compose up -d
    ```
 
 3. Configure as variáveis de ambiente  
    Crie um arquivo `.env` na raiz do projeto:
+
    ```
    PORT=3333
    DATABASE_URL=postgresql://docker:docker@localhost:5432/agents
    ```
 
-4. Instale as dependências  
+4. Instale as dependências
+
    ```bash
    npm install
    ```
 
-5. Execute as migrações do banco  
+5. Execute as migrações do banco
+
    ```bash
    npx drizzle-kit migrate
    ```
 
-6. (Opcional) Popule o banco com dados de exemplo  
+6. (Opcional) Popule o banco com dados de exemplo
+
    ```bash
    npm run db:seed
    ```
@@ -94,61 +100,59 @@ O projeto segue uma arquitetura modular com:
 
 ### 📚 Scripts Disponíveis
 
-- `npm run dev` - Executa o servidor em modo de desenvolvimento com hot reload  
-- `npm start` - Executa o servidor em modo de produção  
-- `npm run db:seed` - Popula o banco de dados com dados de exemplo  
+- `npm run dev` - Executa o servidor em modo de desenvolvimento com hot reload
+- `npm start` - Executa o servidor em modo de produção
+- `npm run db:seed` - Popula o banco de dados com dados de exemplo
 
 ### 🌐 Endpoints
 
 A API estará disponível em [http://localhost:3333](http://localhost:3333)
 
-- `GET /health` - Health check da aplicação  
-- `GET /rooms` - Lista as salas disponíveis  
-
-Desenvolvido com ❤️ durante o NLW da Rocketseat
+- `GET /health` - Health check da aplicação
+- `GET /rooms` - Lista as salas disponíveis
 
 ---
 
-## 🌐 web (Front-end)
+## 💻 web (Front-end)
 
 Projeto desenvolvido durante um evento da Rocketseat para demonstrar o uso de agentes inteligentes na web.
 
 ### 🚀 Tecnologias
 
-- React 19.1 - Biblioteca para interfaces de usuário  
-- TypeScript 5.8 - Superset JavaScript com tipagem estática  
-- Vite 7.0 - Build tool e servidor de desenvolvimento  
-- TailwindCSS 4.1 - Framework CSS utility-first  
-- React Router Dom 7.6 - Biblioteca de roteamento  
-- TanStack React Query 5.8 - Gerenciamento de estado servidor e cache  
-- Radix UI - Componentes primitivos acessíveis  
-- Shadcn/ui - Sistema de componentes  
-- Lucide React - Biblioteca de ícones  
+- **React 19.1** - Biblioteca para interfaces de usuário
+- **TypeScript 5.8** - Superset JavaScript com tipagem estática
+- **Vite 7.0** - Build tool e servidor de desenvolvimento
+- **TailwindCSS 4.1** - Framework CSS utility-first
+- **React Router Dom 7.6** - Biblioteca de roteamento
+- **TanStack React Query 5.8** - Gerenciamento de estado servidor e cache
+- **Radix UI** - Componentes primitivos acessíveis
+- **Shadcn/ui** - Sistema de componentes
+- **Lucide React** - Biblioteca de ícones
 
 ### 📂 Padrões de Projeto
 
-- Component-based Architecture  
-- File-based Routing com React Router  
-- Server State Management com React Query  
-- Variant-based Components com CVA  
-- Composition Pattern com Radix Slot  
-- Path Aliasing (`@/` aponta para `src/`)  
+- **Component-based Architecture** - Arquitetura baseada em componentes React
+- **File-based Routing** - Roteamento baseado em arquivos com React Router
+- **Server State Management** - Gerenciamento de estado servidor com React Query
+- **Variant-based Components** - Componentes com variantes usando CVA
+- **Composition Pattern** - Padrão de composição com Radix Slot
+- **Path Aliasing** - Alias de caminhos (@/ aponta para src/)
 
 ### ⚙️ Configuração do Projeto
 
 #### Pré-requisitos
 
-- Node.js (versão 18 ou superior)  
-- npm ou yarn  
+- Node.js (versão 18 ou superior)
+- npm ou yarn
 
 #### Instalação
 
-1. Clone o repositório  
-2. Instale as dependências:  
+1. Clone o repositório
+2. Instale as dependências:
    ```bash
    npm install
    ```
-3. Execute o servidor de desenvolvimento:  
+3. Execute o servidor de desenvolvimento:
    ```bash
    npm run dev
    ```
@@ -157,9 +161,9 @@ Acesse a aplicação em [http://localhost:5173](http://localhost:5173)
 
 ### 📚 Scripts Disponíveis
 
-- `npm run dev` - Inicia o servidor de desenvolvimento  
-- `npm run build` - Gera build de produção  
-- `npm run preview` - Preview do build de produção  
+- `npm run dev` - Inicia o servidor de desenvolvimento
+- `npm run build` - Gera build de produção
+- `npm run preview` - Preview do build de produção
 
 ### 🔗 Backend
 
@@ -174,9 +178,3 @@ src/
 ├── lib/              # Utilitários e configurações
 └── app.tsx           # Componente raiz
 ```
-
----
-
-> Repositórios Originais:
-> - [Server](https://github.com/rocketseat-education/nlw-agents-aulas-server)
-> - [Web](https://github.com/rocketseat-education/nlw-agents-aulas-web)
